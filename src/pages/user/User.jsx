@@ -61,6 +61,11 @@ function User() {
       setUsers(res.data.data);
     }).catch((error) => console.log(error))
   }, []);
+
+  let livego = (e) =>{
+    e.preventDefault();
+     window.location.href = "/user/UserWatchLive"
+  }
   return (
     <div className="flex flex-col min-h-screen bg-[#f8fafc]">
       {/* <>
@@ -144,7 +149,7 @@ function User() {
                   <p>{notification}</p>
                   {liveActive && (
                     <button
-                      onClick={() => (window.location.href = "/user/UserWatchLive")}
+                      onClick={() =>livego}
                       className="mt-2 bg-blue-600 text-white px-4 py-2 rounded"
                     >
                       Join Live Class
