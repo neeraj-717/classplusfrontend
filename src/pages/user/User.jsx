@@ -63,8 +63,8 @@ function User() {
     }).catch((error) => console.log(error))
   }, []);
 
-  let livego = (e) =>{
-    e.preventDefault();
+  let livego = () =>{
+    // e.preventDefault();
      go("/user/UserWatchLive")
   }
   return (
